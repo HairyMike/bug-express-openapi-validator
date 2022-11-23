@@ -31,12 +31,12 @@ components:
     FirstExample:
       value:
         title: Bug Example
-        description: If theres a field called 'id' in the example, express-open-api-validator fails to start
+        description: Error example (same ID as other example), but valid open-api document
         content:
           id: '1234'
     SecondExample:
       value:
         title: Bug Example
-        description: If theres a field called 'id' in the example, express-open-api-validator fails to start
+        description: Error example (same ID as other example), but valid open-api document
         content:
           id: '1234'
