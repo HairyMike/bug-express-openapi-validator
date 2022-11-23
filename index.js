@@ -10,7 +10,7 @@ app.use(
     }),
   );
 
-app.get('/test', (req, res) => {
+app.get('/v1/test', (req, res) => {
     res.send('Hello World!')
 });
 
