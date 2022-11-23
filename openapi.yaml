@@ -1,0 +1,42 @@
+openapi: 3.0.3
+
+info:
+  title: Example
+  description: Example demonstrating bug in express-openapi-validator
+  version: 1.0.0
+
+servers:
+  - url: '/v1'
+
+paths:
+  /test:
+    get:
+      responses:
+        '200':
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExampleResponse'
+              examples:
+                First example:
+                  $ref: '#/components/examples/FirstExample'
+                Second example:
+                  $ref: '#/components/examples/SecondExample'
+components:
+  schemas:
+    ExampleResponse:
+      type: object
+  examples:
+    FirstExample:
+      value:
+        title: Bug Example
+        description: If theres a field called 'id' in the example, express-open-api-validator fails to start
+        content:
+          id: '1234'
+    SecondExample:
+      value:
+        title: Bug Example
+        description: If theres a field called 'id' in the example, express-open-api-validator fails to start
+        content:
+          id: '1234'
